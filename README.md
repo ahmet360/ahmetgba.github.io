@@ -1,6 +1,6 @@
 # GBA Games Page:
 
-https://playnintendo.github.io/gba
+https://ahmet360.github.io/ahmetgba.github.io/
 
 # GBA Emulator Core Used:
 
