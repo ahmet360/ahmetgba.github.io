@@ -3,10 +3,23 @@
     <head>
         <title>GameBoyAdvance Online</title>
         <meta charset="UTF-8">
+        <style>
+            .hidden { display: none; }
+        </style>
     </head>
     <body>
         <h2>Select A Game:</h2>
-        <ul>
+        
+        <!-- Alphabet Navigation -->
+        <div id="alphabetNav">
+            <button onclick="filterList('All')">All</button>
+            <button onclick="filterList('A')">A</button>
+            <button onclick="filterList('B')">B</button>
+            <!-- Add buttons for all letters -->
+            <button onclick="filterList('Z')">Z</button>
+        </div>
+
+        <ul id="wordsList">
             <li><h4 href="https://ahmet360.github.io/IodineGBA/">Bring your own ROM</h4></li>
             <li><a href="https://ozh.github.io/cookieclicker/">CookieCliker[site not by me]</a></li>
             <li><a href="https://ahmet360.github.io/TBOI/">the binding of issac</a></li>
@@ -104,5 +117,21 @@
             <li><a href="./launcher.html#zelda_past">The Legend of Zelda: A Link to the Past</a></li>
             <li><a href="./launcher.html#zelda_minish">The Legend of Zelda: The Minish Cap</a></li>
         </ul>
+
+        <script>
+            function filterList(letter) {
+                const list = document.getElementById('wordsList');
+                const items = list.getElementsByTagName('li');
+
+                for (let i = 0; i < items.length; i++) {
+                    let item = items[i].textContent || items[i].innerText;
+                    if (letter === 'All' || item.toUpperCase().startsWith(letter)) {
+                        items[i].style.display = '';
+                    } else {
+                        items[i].style.display = 'none';
+                    }
+                }
+            }
+        </script>
     </body>
 </html>
