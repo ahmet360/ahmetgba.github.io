@@ -39,6 +39,7 @@
             <button onclick="filterList('X')">X</button>
             <button onclick="filterList('Y')">Y</button>
             <button onclick="filterList('Z')">Z</button>
+            <button onclick="filterROMHacks()">ROM Hacks</button>
         </div>
 
         <ul id="wordsList">
@@ -142,18 +143,31 @@
 
         <script>
             function filterList(letter) {
-                const list = document.getElementById('wordsList');
-                const items = list.getElementsByTagName('li');
+                const items = document.querySelectorAll('#wordsList li');
 
-                for (let i = 0; i < items.length; i++) {
-                    let item = items[i].textContent || items[i].innerText;
-                    if (letter === 'All' || item.toUpperCase().startsWith(letter)) {
-                        items[i].style.display = '';
+                items.forEach(item => {
+                    let text = item.textContent || item.innerText;
+                    if (letter === 'All' || text.toUpperCase().startsWith(letter)) {
+                        item.style.display = '';
                     } else {
-                        items[i].style.display = 'none';
+                        item.style.display = 'none';
                     }
-                }
+                });
+            }
+
+            function filterROMHacks() {
+                const items = document.querySelectorAll('#wordsList li');
+
+                items.forEach(item => {
+                    // Check if the item has the data-romhack attribute
+                    if (item.querySelector('a[data-romhack="true"]')) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
             }
         </script>
+    </body>
     </body>
 </html>
