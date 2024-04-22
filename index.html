@@ -3,6 +3,8 @@
     <head>
         <title>GameBoyAdvance Online</title>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+
         <style>
             .hidden { display: none; }
         </style>
@@ -11,41 +13,43 @@
         <h2>Select A Game:</h2>
         
         <!-- Alphabet Navigation -->
-        <div id="alphabetNav">
-            <button onclick="filterList('All')">All</button>
-            <button onclick="filterList('A')">A</button>
-            <button onclick="filterList('B')">B</button>
-            <button onclick="filterList('C')">C</button>
-            <button onclick="filterList('D')">D</button>
-            <button onclick="filterList('E')">E</button>
-            <button onclick="filterList('F')">F</button>
-            <button onclick="filterList('G')">G</button>
-            <button onclick="filterList('H')">H</button>
-            <button onclick="filterList('I')">I</button>
-            <button onclick="filterList('J')">J</button>
-            <button onclick="filterList('K')">K</button>
-            <button onclick="filterList('L')">L</button>
-            <button onclick="filterList('M')">M</button>
-            <button onclick="filterList('N')">N</button>
-            <button onclick="filterList('O')">O</button>
-            <button onclick="filterList('P')">P</button>
-            <button onclick="filterList('Q')">Q</button>
-            <button onclick="filterList('R')">R</button>
-            <button onclick="filterList('S')">S</button>
-            <button onclick="filterList('T')">T</button>
-            <button onclick="filterList('U')">U</button>
-            <button onclick="filterList('V')">V</button>
-            <button onclick="filterList('W')">W</button>
-            <button onclick="filterList('X')">X</button>
-            <button onclick="filterList('Y')">Y</button>
-            <button onclick="filterList('Z')">Z</button>
-            <button onclick="filterROMHacks()">ROM Hacks</button>
-        </div>
+            <div id="alphabetNav">
+                <button onclick="filterList('All')">All</button>
+                <button onclick="filterList('A')">A</button>
+                <button onclick="filterList('B')">B</button>
+                <button onclick="filterList('C')">C</button>
+                <button onclick="filterList('D')">D</button>
+                <button onclick="filterList('E')">E</button>
+                <button onclick="filterList('F')">F</button>
+                <button onclick="filterList('G')">G</button>
+                <button onclick="filterList('H')">H</button>
+                <button onclick="filterList('I')">I</button>
+                <button onclick="filterList('J')">J</button>
+                <button onclick="filterList('K')">K</button>
+                <button onclick="filterList('L')">L</button>
+                <button onclick="filterList('M')">M</button>
+                <button onclick="filterList('N')">N</button>
+                <button onclick="filterList('O')">O</button>
+                <button onclick="filterList('P')">P</button>
+                <button onclick="filterList('Q')">Q</button>
+                <button onclick="filterList('R')">R</button>
+                <button onclick="filterList('S')">S</button>
+                <button onclick="filterList('T')">T</button>
+                <button onclick="filterList('U')">U</button>
+                <button onclick="filterList('V')">V</button>
+                <button onclick="filterList('W')">W</button>
+                <button onclick="filterList('X')">X</button>
+                <button onclick="filterList('Y')">Y</button>
+                <button onclick="filterList('Z')">Z</button>
+                <button onclick="filterROMHacks()">ROM Hacks</button>
+            </div>
 
-        <ul id="wordsList">
-            <li><a href="https://ahmet360.github.io/IodineGBA/"><h3>Bring your own ROM</h3></a></li>
-            <li><a href="https://ozh.github.io/cookieclicker/">CookieCliker[site not by me]</a></li>
-            <li><a href="https://ahmet360.github.io/TBOI/">the binding of issac</a></li>
+       
+
+        <ul id="wordsList" class="gradient-list">
+            <li class="hub"><a href="https://ahmet360.github.io/IodineGBA/">Bring your own ROM</a></li>
+            <li class="hub"><a href="https://ozh.github.io/cookieclicker/">CookieCliker[site not by me]</a></li>
+            <li class="hub"><a href="https://ahmet360.github.io/TBOI/">the binding of issac</a></li>
             <li><a href="./launcher.html#advancewars">Advance Wars</a></li>
             <li><a href="./launcher.html#advancewars2">Advance Wars 2</a></li>
             <li><a href="./launcher.html#aladdin">Aladdin</a></li>
